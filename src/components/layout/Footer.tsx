@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src="/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png"
               alt="JOYPET Services & Printers"
-              className="h-12 w-auto brightness-0 invert"
+              className="h-16 w-auto brightness-0 invert"
             />
             <p className="text-sm text-background/80">
               Professional printing and branding services available 24/7. 

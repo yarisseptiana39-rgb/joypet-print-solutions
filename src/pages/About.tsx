@@ -6,23 +6,23 @@ const About = () => {
   const values = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: "Quality First",
-      description: "We never compromise on quality. Every project receives our full attention to detail."
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Reliable Service",
-      description: "Count on us for consistent, dependable service that meets your deadlines."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Customer Focused",
-      description: "Your satisfaction is our priority. We listen, understand, and deliver."
+      title: "Customer Delight",
+      description: "A commitment to surpassing our customer expectations."
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Professional Excellence",
-      description: "Years of experience backed by modern equipment and skilled professionals."
+      title: "Leadership by Example",
+      description: "A commitment to set standards in our business dealings and be exemplar for the industry."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Integrity and Transparency",
+      description: "A commitment to be ethical, sincere and open in our business dealings."
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Pursuit of Excellence",
+      description: "A commitment to strive relentlessly, to constantly improve ourselves, our teams, our services and products."
     }
   ];
 
@@ -43,7 +43,7 @@ const About = () => {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+           <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
               <p className="text-lg text-muted-foreground">
                 JOYPET Services & Printers Ltd. was founded with a simple mission: to provide 
@@ -65,8 +65,8 @@ const About = () => {
             <div className="bg-gradient-primary p-8 rounded-lg text-primary-foreground">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-lg mb-6">
-                To be the leading printing and branding service provider by delivering 
-                exceptional quality, innovation, and customer satisfaction 24/7.
+                Our mission is to build relationships based on "integrity with Performance" and single minded focus to achieve business objectives.
+                We are uniquely poised for growth and to this end we leverage the strength of our professional management.
               </p>
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-lg">
@@ -190,6 +190,95 @@ const About = () => {
                   Professional photography equipment and studio setup for high-quality 
                   photo sessions and product photography.
                 </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Our customer service department is here to assist you in planning your projects' requirements, while adhering to your deadlines.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground">
+                Our team has vast knowledge in print management and are also trained in guiding you on improving your corporate image through promotional materials and branded items. Printing is a complex task and our client service is there to walk you through it.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                We understand that in order to be the best printing company locally and regionally, we must take care of our most valuable asset, you the client.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Our staff is knowledgeable, and experienced in printing procedures and requirements, branding and packaging and best of all, they're friendly!
+              </p>
+            </div>
+            <div className="bg-gradient-primary p-8 rounded-lg text-primary-foreground">
+              <h3 className="text-2xl font-bold mb-4">What Sets Our Team Apart</h3>
+              <ul className="space-y-3">
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Vast knowledge in print management</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Expert guidance on corporate image improvement</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Experience in branding and packaging</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Friendly and approachable service</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Objectives & Principles */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Objectives & Principles</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our commitment to excellence drives everything we do
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <Card className="border-0 bg-card/50 backdrop-blur-sm p-8">
+              <CardHeader>
+                <CardTitle className="text-2xl">Our Main Objective</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  Our main objective is to serve customers both in public and private sectors in such areas as NGOs, banks, government institutions.
+                </p>
+                <p className="text-muted-foreground">
+                  Our main pressing goal is to ensure that our clients concentrate on their core businesses while we manage documents.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="border-0 bg-card/50 backdrop-blur-sm p-8">
+              <CardHeader>
+                <CardTitle className="text-2xl">Innovation & Excellence</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  We are always researching in order to come up with the latest document solutions to keep abreast with the trend and be ahead of competitors.
+                </p>
+                <p className="text-muted-foreground">
+                  Our commitment to continuous improvement ensures we deliver cutting-edge printing solutions.
+                </p>
               </CardContent>
             </Card>
           </div>

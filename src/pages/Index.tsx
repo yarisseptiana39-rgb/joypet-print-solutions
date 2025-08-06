@@ -71,7 +71,7 @@ const Index = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <a href="/contact">Place Your Order</a>
+              <a href="https://wa.me/254716971622?text=Hello%20JOYPET,%20I%20would%20like%20to%20place%20an%20order">Place Your Order</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <a href="tel:0716971622">Call Now</a>
@@ -193,7 +193,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <a href="/contact">Get Quote</a>
+              <a href="https://wa.me/254716971622?text=Hello%20JOYPET,%20I%20would%20like%20to%20get%20a%20quote">Get Quote</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
               <a href="https://wa.me/254716971622">WhatsApp Us</a>
