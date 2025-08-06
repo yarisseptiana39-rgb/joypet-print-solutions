@@ -74,7 +74,9 @@ const Index = () => {
               <a href="https://wa.me/254716971622?text=Hello%20JOYPET,%20I%20would%20like%20to%20place%20an%20order">Place Your Order</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <a href="tel:0716971622">Call Now</a>
+              <a href="tel:0716971622" className="flex items-center space-x-2">
+                <span className="text-lg font-semibold">📞 0716971622</span>
+              </a>
             </Button>
           </div>
         </div>
