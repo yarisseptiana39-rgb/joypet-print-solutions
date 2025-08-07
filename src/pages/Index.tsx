@@ -51,7 +51,7 @@ const Index = () => {
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Our Strength is <br />
-            <span className="text-primary bg-primary-foreground bg-clip-text">Your Advantage</span>
+            <span className="text-primary-foreground/80">Your Advantage</span>
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-primary-foreground/90">
             Professional printing and branding services available 24/7. 

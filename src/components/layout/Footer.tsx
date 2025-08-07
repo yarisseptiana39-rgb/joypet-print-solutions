@@ -1,6 +1,7 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, MessageCircle, Twitter, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import TikTokIcon from "@/components/ui/tiktok-icon";
 
 const Footer = () => {
   return (
@@ -27,6 +28,21 @@ const Footer = () => {
               <Button variant="ghost" size="icon" asChild>
                 <a href="#" className="text-background/80 hover:text-primary">
                   <Instagram className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" className="text-background/80 hover:text-primary">
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" className="text-background/80 hover:text-primary">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" className="text-background/80 hover:text-primary">
+                  <TikTokIcon className="w-5 h-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
