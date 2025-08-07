@@ -25,34 +25,18 @@ const Gallery = () => {
     },
     {
       id: 3,
-      title: "Binding Services Demo",
-      description: "Complete overview of our professional binding capabilities",
+      title: "Custom Heat Press Projects",
+      description: "T-shirt and promotional item printing examples",
       type: "video",
       thumbnail: "/api/placeholder/400/225",
       url: "https://youtube.com/watch?v=example2"
     },
     {
       id: 4,
-      title: "Custom Heat Press Projects",
-      description: "T-shirt and promotional item printing examples",
-      type: "video",
-      thumbnail: "/api/placeholder/400/225",
-      url: "https://youtube.com/watch?v=example3"
-    },
-    {
-      id: 5,
       title: "Large Format Banners",
       description: "Eye-catching banners for various events and promotions",
       type: "image",
       url: "/api/placeholder/400/300"
-    },
-    {
-      id: 6,
-      title: "Photo Studio Session",
-      description: "Professional photography services for products and portraits",
-      type: "video",
-      thumbnail: "/api/placeholder/400/225",
-      url: "https://youtube.com/watch?v=example4"
     }
   ];
 
@@ -77,40 +61,6 @@ const Gallery = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Browse through our collection of completed projects, process videos, and work samples
             </p>
-          </div>
-
-          {/* Upload Section for Admin (placeholder UI) */}
-          <div className="mb-12 p-6 bg-card/50 backdrop-blur-sm rounded-lg border-2 border-dashed border-primary/20">
-            <div className="text-center">
-              <Upload className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Upload New Media</h3>
-              <p className="text-muted-foreground mb-4">Add images or YouTube video links to showcase your work</p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <div className="flex-1">
-                  <Label htmlFor="media-upload" className="sr-only">Upload file</Label>
-                  <Input
-                    id="media-upload"
-                    type="file"
-                    accept="image/*,video/*"
-                    className="w-full"
-                    placeholder="Choose file..."
-                  />
-                </div>
-                <div className="flex-1">
-                  <Label htmlFor="youtube-url" className="sr-only">YouTube URL</Label>
-                  <Input
-                    id="youtube-url"
-                    type="url"
-                    placeholder="YouTube video URL..."
-                    className="w-full"
-                  />
-                </div>
-                <Button className="bg-gradient-primary">
-                  <Upload className="w-4 h-4 mr-2" />
-                  Upload
-                </Button>
-              </div>
-            </div>
           </div>
 
           {/* Media Grid */}
