@@ -32,7 +32,8 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -46,7 +47,8 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="bg-gradient-primary hover:shadow-elegant">
+            </div>
+            <Button asChild className="bg-gradient-primary hover:shadow-elegant ml-8">
               <a href="tel:0716971622" className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>

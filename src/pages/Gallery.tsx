@@ -1,103 +1,60 @@
-import { useState } from "react";
-import { Play, ExternalLink, Image as ImageIcon, FileText, CreditCard, Shirt } from "lucide-react";
+import { Play, Image as ImageIcon, Video, Upload } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  // Sample portfolio items - in a real app, these would come from a CMS or API
-  const portfolioItems = [
+  // Sample media items - in a real app, these would come from a CMS or API
+  const mediaItems = [
     {
       id: 1,
-      title: "Corporate Business Cards",
-      category: "business-cards",
-      description: "Premium business cards with embossed logo and special finish",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Digital Printing Showcase",
+      description: "High-quality digital printing samples and process demonstration",
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=example1"
     },
     {
       id: 2,
-      title: "Event Poster Campaign",
-      category: "posters",
-      description: "Large format posters for music festival promotion",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Business Card Collection",
+      description: "Premium business cards with various finishes and designs",
+      type: "image",
+      url: "/api/placeholder/400/300"
     },
     {
       id: 3,
-      title: "Custom T-Shirt Design",
-      category: "apparel",
-      description: "Heat press printing for company uniforms and promotional wear",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Binding Services Demo",
+      description: "Complete overview of our professional binding capabilities",
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=example2"
     },
     {
       id: 4,
-      title: "Annual Report Binding",
-      category: "binding",
-      description: "Hard cover binding for corporate annual reports",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Custom Heat Press Projects",
+      description: "T-shirt and promotional item printing examples",
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=example3"
     },
     {
       id: 5,
-      title: "Product Photography Session",
-      category: "photography",
-      description: "Professional product photography for e-commerce",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Large Format Banners",
+      description: "Eye-catching banners for various events and promotions",
+      type: "image",
+      url: "/api/placeholder/400/300"
     },
     {
       id: 6,
-      title: "Marketing Flyer Design",
-      category: "flyers",
-      description: "Eye-catching flyers for restaurant grand opening",
-      image: "/api/placeholder/400/300",
-      type: "image"
+      title: "Photo Studio Session",
+      description: "Professional photography services for products and portraits",
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=example4"
     }
   ];
-
-  const videoShowcase = [
-    {
-      id: 1,
-      title: "Digital Printing Process",
-      description: "Behind the scenes look at our digital printing workflow",
-      thumbnail: "/api/placeholder/400/225",
-      videoUrl: "https://youtube.com/watch?v=example1"
-    },
-    {
-      id: 2,
-      title: "Binding Services Overview",
-      description: "Complete guide to our professional binding services",
-      thumbnail: "/api/placeholder/400/225",
-      videoUrl: "https://youtube.com/watch?v=example2"
-    },
-    {
-      id: 3,
-      title: "Custom Heat Press Projects",
-      description: "Examples of custom t-shirt and promotional item printing",
-      thumbnail: "/api/placeholder/400/225",
-      videoUrl: "https://youtube.com/watch?v=example3"
-    }
-  ];
-
-  const categories = [
-    { id: "all", name: "All Work", icon: <ImageIcon className="w-4 h-4" /> },
-    { id: "business-cards", name: "Business Cards", icon: <CreditCard className="w-4 h-4" /> },
-    { id: "posters", name: "Posters & Banners", icon: <FileText className="w-4 h-4" /> },
-    { id: "apparel", name: "Custom Apparel", icon: <Shirt className="w-4 h-4" /> },
-    { id: "binding", name: "Binding Services", icon: <FileText className="w-4 h-4" /> },
-    { id: "photography", name: "Photography", icon: <ImageIcon className="w-4 h-4" /> },
-    { id: "flyers", name: "Flyers & Marketing", icon: <FileText className="w-4 h-4" /> }
-  ];
-
-  const filteredItems = selectedCategory === "all" 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen">
@@ -106,219 +63,113 @@ const Gallery = () => {
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold">Our Gallery</h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
-            Explore our portfolio of successful projects and see the quality that makes JOYPET 
-            the preferred choice for printing and branding services.
+            Explore our collection of work samples, videos, and project showcases that demonstrate 
+            the quality and creativity that makes JOYPET your trusted printing partner.
           </p>
         </div>
       </HeroSection>
 
-      {/* Portfolio Section */}
+      {/* Media Gallery Section */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="portfolio" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12">
-              <TabsTrigger value="portfolio">Portfolio</TabsTrigger>
-              <TabsTrigger value="videos">Video Showcase</TabsTrigger>
-              <TabsTrigger value="testimonials">Client Work</TabsTrigger>
-            </TabsList>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Media Gallery</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Browse through our collection of completed projects, process videos, and work samples
+            </p>
+          </div>
 
-            <TabsContent value="portfolio" className="space-y-8">
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-4 justify-center">
-                {categories.map((category) => (
-                  <Button
-                    key={category.id}
-                    variant={selectedCategory === category.id ? "default" : "outline"}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className="flex items-center space-x-2"
-                  >
-                    {category.icon}
-                    <span>{category.name}</span>
-                  </Button>
-                ))}
+          {/* Upload Section for Admin (placeholder UI) */}
+          <div className="mb-12 p-6 bg-card/50 backdrop-blur-sm rounded-lg border-2 border-dashed border-primary/20">
+            <div className="text-center">
+              <Upload className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Upload New Media</h3>
+              <p className="text-muted-foreground mb-4">Add images or YouTube video links to showcase your work</p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div className="flex-1">
+                  <Label htmlFor="media-upload" className="sr-only">Upload file</Label>
+                  <Input
+                    id="media-upload"
+                    type="file"
+                    accept="image/*,video/*"
+                    className="w-full"
+                    placeholder="Choose file..."
+                  />
+                </div>
+                <div className="flex-1">
+                  <Label htmlFor="youtube-url" className="sr-only">YouTube URL</Label>
+                  <Input
+                    id="youtube-url"
+                    type="url"
+                    placeholder="YouTube video URL..."
+                    className="w-full"
+                  />
+                </div>
+                <Button className="bg-gradient-primary">
+                  <Upload className="w-4 h-4 mr-2" />
+                  Upload
+                </Button>
               </div>
+            </div>
+          </div>
 
-              {/* Portfolio Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item) => (
-                  <Card key={item.id} className="group overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300">
-                    <div className="relative overflow-hidden">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <ImageIcon className="w-12 h-12 text-muted-foreground" />
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button size="sm" variant="outline" className="text-primary-foreground border-primary-foreground">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          View Details
-                        </Button>
-                      </div>
+          {/* Media Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mediaItems.map((item) => (
+              <Card key={item.id} className="group overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300">
+                <div className="relative overflow-hidden">
+                  {item.type === "video" ? (
+                    <div className="aspect-video bg-muted flex items-center justify-center">
+                      <Play className="w-12 h-12 text-muted-foreground" />
                     </div>
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                          {item.title}
-                        </CardTitle>
-                        <Badge variant="secondary">
-                          {categories.find(cat => cat.id === item.category)?.name || "Other"}
-                        </Badge>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground text-sm">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="videos" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-4">Video Showcase</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  Get an inside look at our processes and see the quality of our work in action.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {videoShowcase.map((video) => (
-                  <Card key={video.id} className="group overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300">
-                    <div className="relative overflow-hidden">
-                      <div className="aspect-video bg-muted flex items-center justify-center">
-                        <Play className="w-12 h-12 text-muted-foreground" />
-                      </div>
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button 
-                          size="lg" 
-                          className="bg-primary hover:bg-primary/90"
-                          asChild
-                        >
-                          <a href={video.videoUrl} target="_blank" rel="noopener noreferrer">
-                            <Play className="w-6 h-6 mr-2" />
-                            Watch Video
-                          </a>
-                        </Button>
-                      </div>
+                  ) : (
+                    <div className="aspect-video bg-muted flex items-center justify-center">
+                      <ImageIcon className="w-12 h-12 text-muted-foreground" />
                     </div>
-                    <CardHeader>
-                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                        {video.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground text-sm">
-                        {video.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="testimonials" className="space-y-8">
-              <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-4">Client Success Stories</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  See how we've helped businesses achieve their goals with our printing and branding services.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="border-0 bg-card/50 backdrop-blur-sm p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
-                        AB
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Acme Business Solutions</h3>
-                        <p className="text-sm text-muted-foreground">Corporate Identity Package</p>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground italic">
-                      "JOYPET delivered exceptional quality business cards and branding materials. 
-                      Their 24/7 availability saved us when we needed urgent printing for a last-minute presentation."
-                    </p>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-primary rounded-full"></div>
-                      ))}
+                  )}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    {item.type === "video" ? (
+                      <Button 
+                        size="lg" 
+                        className="bg-primary hover:bg-primary/90"
+                        asChild
+                      >
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
+                          <Play className="w-6 h-6 mr-2" />
+                          Watch Video
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button size="sm" variant="outline" className="text-primary-foreground border-primary-foreground">
+                        <ImageIcon className="w-4 h-4 mr-2" />
+                        View Image
+                      </Button>
+                    )}
+                  </div>
+                  <div className="absolute top-2 right-2">
+                    <div className="bg-black/70 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
+                      {item.type === "video" ? (
+                        <Video className="w-3 h-3" />
+                      ) : (
+                        <ImageIcon className="w-3 h-3" />
+                      )}
+                      <span className="capitalize">{item.type}</span>
                     </div>
                   </div>
-                </Card>
-
-                <Card className="border-0 bg-card/50 backdrop-blur-sm p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
-                        SE
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Stellar Events</h3>
-                        <p className="text-sm text-muted-foreground">Event Marketing Materials</p>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground italic">
-                      "From banners to flyers, JOYPET handled all our event printing needs with 
-                      professionalism and speed. The quality was outstanding and delivery was on time."
-                    </p>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="border-0 bg-card/50 backdrop-blur-sm p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
-                        TF
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">TechFlow Solutions</h3>
-                        <p className="text-sm text-muted-foreground">Employee Handbook Binding</p>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground italic">
-                      "Perfect binding service for our company handbooks. The hard cover binding 
-                      looks professional and durable. Great attention to detail and competitive pricing."
-                    </p>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="border-0 bg-card/50 backdrop-blur-sm p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
-                        CM
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Creative Minds Agency</h3>
-                        <p className="text-sm text-muted-foreground">Custom T-Shirt Printing</p>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground italic">
-                      "Amazing heat press printing for our team t-shirts and client promotional items. 
-                      The colors are vibrant and the print quality is excellent. Highly recommended!"
-                    </p>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-4 h-4 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
