@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ui/service-card";
 import ServicesCarousel from "@/components/ui/services-carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import servicesBg from "@/assets/services-bg.jpg";
+import homepagePrintingBg from "@/assets/homepage-printing-bg.jpg";
 import serviceDigitalPrinting from "@/assets/service-digital-printing.jpg";
 import servicePhotoStudio from "@/assets/service-photo-studio.jpg";
 import serviceBusinessCards from "@/assets/service-business-cards.jpg";
@@ -59,8 +60,17 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
+    <div 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: `url(${homepagePrintingBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
+      <div className="relative z-10">{/* Hero Section */}
       <HeroSection>
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -229,6 +239,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 };

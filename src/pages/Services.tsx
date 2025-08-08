@@ -3,48 +3,63 @@ import HeroSection from "@/components/ui/hero-section";
 import ServiceCard from "@/components/ui/service-card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import servicesBg from "@/assets/services-bg.jpg";
+import serviceDigitalPrinting from "@/assets/service-digital-printing.jpg";
+import servicePhotoStudio from "@/assets/service-photo-studio.jpg";
+import serviceBusinessCards from "@/assets/service-business-cards.jpg";
+import serviceBinding from "@/assets/service-binding.jpg";
+import serviceLamination from "@/assets/service-lamination.jpg";
+import serviceHeatPress from "@/assets/service-heat-press.jpg";
 
 const Services = () => {
   const mainServices = [
     {
       icon: <Printer className="w-6 h-6" />,
       title: "Digital Printing",
-      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details."
+      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details.",
+      image: serviceDigitalPrinting
     },
     {
       icon: <Printer className="w-6 h-6" />,
       title: "Bulk Printing",
-      description: "Cost-effective bulk printing solutions for large quantities with consistent quality throughout the entire run."
+      description: "Cost-effective bulk printing solutions for large quantities with consistent quality throughout the entire run.",
+      image: serviceDigitalPrinting
     },
     {
       icon: <Camera className="w-6 h-6" />,
       title: "Photo Studio Services",
-      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots."
+      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots.",
+      image: servicePhotoStudio
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
       title: "Business Cards",
-      description: "Premium business cards in various finishes and materials to make lasting first impressions."
+      description: "Premium business cards in various finishes and materials to make lasting first impressions.",
+      image: serviceBusinessCards
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Flyers & Posters",
-      description: "Eye-catching flyers and posters for marketing, events, and promotional campaigns in all sizes."
+      description: "Eye-catching flyers and posters for marketing, events, and promotional campaigns in all sizes.",
+      image: serviceDigitalPrinting
     },
     {
       icon: <Image className="w-6 h-6" />,
       title: "Banners",
-      description: "Durable banners with eyelet and hand hole options for indoor and outdoor advertising needs."
+      description: "Durable banners with eyelet and hand hole options for indoor and outdoor advertising needs.",
+      image: serviceDigitalPrinting
     },
     {
       icon: <Layers className="w-6 h-6" />,
       title: "Laminations",
-      description: "Professional lamination services to protect and enhance your important documents and materials."
+      description: "Professional lamination services to protect and enhance your important documents and materials.",
+      image: serviceLamination
     },
     {
       icon: <Shirt className="w-6 h-6" />,
       title: "Heat Press Printing",
-      description: "Custom t-shirt printing and promotional item customization with vibrant, long-lasting designs."
+      description: "Custom t-shirt printing and promotional item customization with vibrant, long-lasting designs.",
+      image: serviceHeatPress
     }
   ];
 
@@ -85,8 +100,16 @@ const Services = () => {
       </HeroSection>
 
       {/* Main Services */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 bg-background relative"
+        style={{
+          backgroundImage: `url(${servicesBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -101,6 +124,7 @@ const Services = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
+                image={service.image}
               />
             ))}
           </div>
