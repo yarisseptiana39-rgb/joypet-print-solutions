@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -96,7 +97,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection>
+      <HeroSection backgroundImage={contactBg}>
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold">Contact Us</h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">

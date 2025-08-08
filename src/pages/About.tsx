@@ -1,6 +1,7 @@
 import { CheckCircle, Users, Award, Clock } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const About = () => {
   const values = [
@@ -29,7 +30,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection>
+      <HeroSection backgroundImage={aboutBg}>
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold">About JOYPET</h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
@@ -42,8 +43,8 @@ const About = () => {
       {/* Company Story */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-           <div className="space-y-6">
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">Our Story</h2>
               <p className="text-lg text-muted-foreground">
                 JOYPET Services & Printers Ltd. was founded with a simple mission: to provide 

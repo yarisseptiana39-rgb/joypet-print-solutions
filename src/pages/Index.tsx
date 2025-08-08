@@ -2,7 +2,9 @@ import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, 
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/ui/hero-section";
 import ServiceCard from "@/components/ui/service-card";
+import ServicesCarousel from "@/components/ui/services-carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import servicesBg from "@/assets/services-bg.jpg";
 
 const Index = () => {
   const features = [
@@ -82,9 +84,20 @@ const Index = () => {
         </div>
       </HeroSection>
 
+      {/* Services Carousel */}
+      <ServicesCarousel />
+
       {/* Services Overview */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 bg-background relative"
+        style={{
+          backgroundImage: `url(${servicesBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
