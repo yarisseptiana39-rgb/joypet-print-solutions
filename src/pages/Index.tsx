@@ -5,6 +5,12 @@ import ServiceCard from "@/components/ui/service-card";
 import ServicesCarousel from "@/components/ui/services-carousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import servicesBg from "@/assets/services-bg.jpg";
+import serviceDigitalPrinting from "@/assets/service-digital-printing.jpg";
+import servicePhotoStudio from "@/assets/service-photo-studio.jpg";
+import serviceBusinessCards from "@/assets/service-business-cards.jpg";
+import serviceBinding from "@/assets/service-binding.jpg";
+import serviceLamination from "@/assets/service-lamination.jpg";
+import serviceHeatPress from "@/assets/service-heat-press.jpg";
 
 const Index = () => {
   const features = [
@@ -17,32 +23,38 @@ const Index = () => {
     {
       icon: <Printer className="w-6 h-6" />,
       title: "Digital Printing",
-      description: "High-quality digital printing for all your documents and marketing materials."
+      description: "High-quality digital printing for all your documents and marketing materials.",
+      image: serviceDigitalPrinting
     },
     {
       icon: <Camera className="w-6 h-6" />,
       title: "Photo Studio",
-      description: "Professional photography services with modern equipment and expertise."
+      description: "Professional photography services with modern equipment and expertise.",
+      image: servicePhotoStudio
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
       title: "Business Cards",
-      description: "Premium business cards that make lasting first impressions."
+      description: "Premium business cards that make lasting first impressions.",
+      image: serviceBusinessCards
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Binding Services",
-      description: "Complete binding solutions including wire, spiral, and hard cover binding."
+      description: "Complete binding solutions including wire, spiral, and hard cover binding.",
+      image: serviceBinding
     },
     {
       icon: <Scissors className="w-6 h-6" />,
       title: "Laminations",
-      description: "Protect and enhance your documents with professional lamination services."
+      description: "Protect and enhance your documents with professional lamination services.",
+      image: serviceLamination
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Heat Press Printing",
-      description: "Custom t-shirt printing and heat press services for promotional items."
+      description: "Custom t-shirt printing and heat press services for promotional items.",
+      image: serviceHeatPress
     },
   ];
 
@@ -112,6 +124,7 @@ const Index = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
+                image={service.image}
               />
             ))}
           </div>

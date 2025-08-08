@@ -1,9 +1,9 @@
-import { Play, Image as ImageIcon, Video, Upload } from "lucide-react";
+import { Play, Image as ImageIcon, Video } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import galleryDigitalPrinting from "@/assets/gallery-digital-printing.jpg";
+import galleryBusinessCards from "@/assets/gallery-business-cards.jpg";
 
 const Gallery = () => {
   // Sample media items - in a real app, these would come from a CMS or API
@@ -12,16 +12,15 @@ const Gallery = () => {
       id: 1,
       title: "Digital Printing Showcase",
       description: "High-quality digital printing samples and process demonstration",
-      type: "video",
-      thumbnail: "/api/placeholder/400/225",
-      url: "https://youtube.com/watch?v=example1"
+      type: "image",
+      url: galleryDigitalPrinting
     },
     {
       id: 2,
       title: "Business Card Collection",
       description: "Premium business cards with various finishes and designs",
       type: "image",
-      url: "/api/placeholder/400/300"
+      url: galleryBusinessCards
     },
     {
       id: 3,
@@ -35,8 +34,9 @@ const Gallery = () => {
       id: 4,
       title: "Large Format Banners",
       description: "Eye-catching banners for various events and promotions",
-      type: "image",
-      url: "/api/placeholder/400/300"
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=example3"
     }
   ];
 
@@ -67,16 +67,18 @@ const Gallery = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mediaItems.map((item) => (
               <Card key={item.id} className="group overflow-hidden border-0 bg-card/50 backdrop-blur-sm hover:shadow-elegant transition-all duration-300">
-                <div className="relative overflow-hidden">
-                  {item.type === "video" ? (
-                    <div className="aspect-video bg-muted flex items-center justify-center">
-                      <Play className="w-12 h-12 text-muted-foreground" />
-                    </div>
-                  ) : (
-                    <div className="aspect-video bg-muted flex items-center justify-center">
-                      <ImageIcon className="w-12 h-12 text-muted-foreground" />
-                    </div>
-                  )}
+                 <div className="relative overflow-hidden">
+                   {item.type === "video" ? (
+                     <div className="aspect-video bg-muted flex items-center justify-center">
+                       <Play className="w-12 h-12 text-muted-foreground" />
+                     </div>
+                   ) : (
+                     <img 
+                       src={item.url} 
+                       alt={item.title}
+                       className="w-full aspect-video object-cover"
+                     />
+                   )}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     {item.type === "video" ? (
                       <Button 
