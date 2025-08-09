@@ -8,9 +8,9 @@ const Careers = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroSection>
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">Join Our Team</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
+        <div className="space-y-6 w-full">
+          <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center">Join Our Team</h1>
+          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
             Be part of a dynamic team that's passionate about delivering exceptional printing 
             and branding services. Grow your career with JOYPET Services & Printers Ltd.
           </p>

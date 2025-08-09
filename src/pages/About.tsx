@@ -31,9 +31,9 @@ const About = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroSection backgroundImage={aboutBg}>
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">About JOYPET</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
+        <div className="space-y-6 w-full">
+          <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center">About JOYPET</h1>
+          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
             Your trusted partner for professional printing and branding services. 
             Delivering excellence 24/7 with cutting-edge technology and unmatched customer service.
           </p>
@@ -82,9 +82,9 @@ const About = () => {
       {/* Our Values */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Our Values</h2>
+            <p className="text-lg text-muted-foreground w-full">
               The principles that guide everything we do at JOYPET
             </p>
           </div>

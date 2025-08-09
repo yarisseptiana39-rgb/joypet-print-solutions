@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, Scissors, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, Scissors, Zap, Copy, ClipboardList, Hash, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/ui/hero-section";
 import ServiceCard from "@/components/ui/service-card";
@@ -12,6 +12,11 @@ import serviceBusinessCards from "@/assets/service-business-cards.jpg";
 import serviceBinding from "@/assets/service-binding.jpg";
 import serviceLamination from "@/assets/service-lamination.jpg";
 import serviceHeatPress from "@/assets/service-heat-press.jpg";
+import servicePhotocopying from "@/assets/service-photocopying.jpg";
+import serviceTendering from "@/assets/service-tendering.jpg";
+import serviceNumbering from "@/assets/service-numbering.jpg";
+import serviceRemoval from "@/assets/service-removal.jpg";
+import serviceLargeFormat from "@/assets/service-large-format.jpg";
 
 const Index = () => {
   const features = [
@@ -22,22 +27,22 @@ const Index = () => {
 
   const services = [
     {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Digital Printing",
-      description: "High-quality digital printing for all your documents and marketing materials.",
-      image: serviceDigitalPrinting
+      icon: <Copy className="w-6 h-6" />,
+      title: "Photocopying",
+      description: "Professional photocopying services with high-quality output for all your document needs.",
+      image: servicePhotocopying
     },
     {
-      icon: <Camera className="w-6 h-6" />,
-      title: "Photo Studio",
-      description: "Professional photography services with modern equipment and expertise.",
-      image: servicePhotoStudio
+      icon: <ClipboardList className="w-6 h-6" />,
+      title: "Tendering Process from Applications",
+      description: "Complete tendering process assistance from application preparation to submission.",
+      image: serviceTendering
     },
     {
-      icon: <CreditCard className="w-6 h-6" />,
-      title: "Business Cards",
-      description: "Premium business cards that make lasting first impressions.",
-      image: serviceBusinessCards
+      icon: <Hash className="w-6 h-6" />,
+      title: "Tender Documents Numbering",
+      description: "Professional document numbering and organization for tender submissions.",
+      image: serviceNumbering
     },
     {
       icon: <FileText className="w-6 h-6" />,
@@ -46,16 +51,22 @@ const Index = () => {
       image: serviceBinding
     },
     {
-      icon: <Scissors className="w-6 h-6" />,
-      title: "Laminations",
-      description: "Protect and enhance your documents with professional lamination services.",
-      image: serviceLamination
+      icon: <Trash2 className="w-6 h-6" />,
+      title: "Removal of Flyers and Posters",
+      description: "Professional removal service for outdated flyers and posters from various surfaces.",
+      image: serviceRemoval
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Heat Press Printing",
-      description: "Custom t-shirt printing and heat press services for promotional items.",
-      image: serviceHeatPress
+      icon: <CreditCard className="w-6 h-6" />,
+      title: "Business Cards",
+      description: "Premium business cards that make lasting first impressions.",
+      image: serviceBusinessCards
+    },
+    {
+      icon: <Printer className="w-6 h-6" />,
+      title: "Large Format Printing",
+      description: "Professional large format printing for banners, posters, and signage.",
+      image: serviceLargeFormat
     },
   ];
 
@@ -73,13 +84,13 @@ const Index = () => {
       <div className="relative z-10">{/* Hero Section */}
       <HeroSection>
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight w-full text-left md:text-center">
             Our Strength is <br />
             <span className="text-primary-foreground/80">Your Advantage</span>
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto text-primary-foreground/90">
+          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
             Professional printing and branding services available 24/7. 
-            From business cards to large format printing, we deliver excellence every time.
+            From photocopying to large format printing, we deliver excellence every time.
           </p>
           
           {/* Features */}
@@ -120,10 +131,10 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive printing and branding solutions to meet all your business needs.
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Our Priority Services</h2>
+            <p className="text-lg text-muted-foreground w-full">
+              Comprehensive printing and document services to meet all your business needs.
             </p>
           </div>
 
@@ -153,9 +164,9 @@ const Index = () => {
       {/* Why Choose Us */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose JOYPET?</h2>
-            <p className="text-lg text-muted-foreground">
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Why Choose JOYPET?</h2>
+            <p className="text-lg text-muted-foreground w-full">
               Experience the difference of professional service and quality
             </p>
           </div>
@@ -222,13 +233,15 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg mb-8 text-primary-foreground/90">
-            Contact us today for a free consultation and quote for your printing needs.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full text-left md:text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg mb-8 text-primary-foreground/90 w-full">
+              Contact us today for a free consultation and quote for your printing needs.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <a href="https://wa.me/254716971622?text=Hello%20JOYPET,%20I%20would%20like%20to%20get%20a%20quote">Get Quote</a>

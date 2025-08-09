@@ -1,4 +1,4 @@
-import { Printer, Camera, CreditCard, FileText, Layers, Scissors, Zap, Image, Bookmark, Shirt } from "lucide-react";
+import { Printer, Camera, CreditCard, FileText, Layers, Scissors, Zap, Image, Bookmark, Shirt, Copy, ClipboardList, Hash, Trash2 } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import ServiceCard from "@/components/ui/service-card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,26 +10,43 @@ import serviceBusinessCards from "@/assets/service-business-cards.jpg";
 import serviceBinding from "@/assets/service-binding.jpg";
 import serviceLamination from "@/assets/service-lamination.jpg";
 import serviceHeatPress from "@/assets/service-heat-press.jpg";
+import servicePhotocopying from "@/assets/service-photocopying.jpg";
+import serviceTendering from "@/assets/service-tendering.jpg";
+import serviceNumbering from "@/assets/service-numbering.jpg";
+import serviceRemoval from "@/assets/service-removal.jpg";
+import serviceLargeFormat from "@/assets/service-large-format.jpg";
 
 const Services = () => {
   const mainServices = [
     {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Digital Printing",
-      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details.",
-      image: serviceDigitalPrinting
+      icon: <Copy className="w-6 h-6" />,
+      title: "Photocopying",
+      description: "Professional photocopying services with high-quality output for all your document needs.",
+      image: servicePhotocopying
     },
     {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Bulk Printing",
-      description: "Cost-effective bulk printing solutions for large quantities with consistent quality throughout the entire run.",
-      image: serviceDigitalPrinting
+      icon: <ClipboardList className="w-6 h-6" />,
+      title: "Tendering Process from Applications",
+      description: "Complete tendering process assistance from application preparation to submission.",
+      image: serviceTendering
     },
     {
-      icon: <Camera className="w-6 h-6" />,
-      title: "Photo Studio Services",
-      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots.",
-      image: servicePhotoStudio
+      icon: <Hash className="w-6 h-6" />,
+      title: "Tender Documents Numbering",
+      description: "Professional document numbering and organization for tender submissions.",
+      image: serviceNumbering
+    },
+    {
+      icon: <Bookmark className="w-6 h-6" />,
+      title: "Binding Services",
+      description: "Complete binding solutions including wire, spiral, and hard cover binding.",
+      image: serviceBinding
+    },
+    {
+      icon: <Trash2 className="w-6 h-6" />,
+      title: "Removal of Flyers and Posters",
+      description: "Professional removal service for outdated flyers and posters from various surfaces.",
+      image: serviceRemoval
     },
     {
       icon: <CreditCard className="w-6 h-6" />,
@@ -38,16 +55,22 @@ const Services = () => {
       image: serviceBusinessCards
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Flyers & Posters",
-      description: "Eye-catching flyers and posters for marketing, events, and promotional campaigns in all sizes.",
+      icon: <Printer className="w-6 h-6" />,
+      title: "Large Format Printing",
+      description: "Professional large format printing for banners, posters, and signage.",
+      image: serviceLargeFormat
+    },
+    {
+      icon: <Printer className="w-6 h-6" />,
+      title: "Digital Printing",
+      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details.",
       image: serviceDigitalPrinting
     },
     {
-      icon: <Image className="w-6 h-6" />,
-      title: "Banners",
-      description: "Durable banners with eyelet and hand hole options for indoor and outdoor advertising needs.",
-      image: serviceDigitalPrinting
+      icon: <Camera className="w-6 h-6" />,
+      title: "Photo Studio Services",
+      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots.",
+      image: servicePhotoStudio
     },
     {
       icon: <Layers className="w-6 h-6" />,
@@ -90,10 +113,10 @@ const Services = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <HeroSection>
-        <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">Our Services</h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
-            Comprehensive printing and branding solutions designed to meet all your business needs. 
+        <div className="space-y-6 w-full">
+          <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center">Our Services</h1>
+          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
+            Comprehensive printing and document services designed to meet all your business needs. 
             Professional quality, competitive pricing, available 24/7.
           </p>
         </div>
@@ -110,10 +133,10 @@ const Services = () => {
       >
         <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From digital printing to photo studio services, we offer everything you need for professional results.
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Priority Services</h2>
+            <p className="text-lg text-muted-foreground w-full">
+              From photocopying to large format printing, we offer everything you need for professional results.
             </p>
           </div>
 
