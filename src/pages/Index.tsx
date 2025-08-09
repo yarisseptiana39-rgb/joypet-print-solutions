@@ -74,13 +74,13 @@ const Index = () => {
     <div 
       className="min-h-screen relative"
       style={{
-        backgroundImage: `url(${homepagePrintingBg})`,
+        backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
     >
-      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
       <div className="relative z-10">{/* Hero Section */}
       <HeroSection>
         <div className="space-y-6">
@@ -122,14 +122,14 @@ const Index = () => {
 
       {/* Services Overview */}
       <section 
-        className="py-16 bg-background relative"
+        className="py-16 relative"
         style={{
-          backgroundImage: `url(${servicesBg})`,
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="w-full text-left md:text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Our Priority Services</h2>
@@ -162,8 +162,16 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="w-full text-left md:text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Why Choose JOYPET?</h2>
             <p className="text-lg text-muted-foreground w-full">
@@ -172,7 +180,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
                   <Clock className="w-8 h-8 text-primary-foreground" />
@@ -186,7 +194,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
                   <Zap className="w-8 h-8 text-primary-foreground" />
@@ -200,7 +208,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-primary-foreground" />
@@ -214,7 +222,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
               <CardHeader>
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
                   <CreditCard className="w-8 h-8 text-primary-foreground" />
@@ -232,8 +240,16 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-primary-foreground">
           <div className="w-full text-left md:text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">
               Ready to Get Started?
