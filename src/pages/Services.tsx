@@ -17,7 +17,6 @@ import serviceRemoval from "@/assets/service-removal.jpg";
 import serviceLargeFormat from "@/assets/service-large-format.jpg";
 
 const Services = () => {
-  // Core Services (Priority)
   const coreServices = [
     {
       icon: <Copy className="w-6 h-6" />,
@@ -32,50 +31,22 @@ const Services = () => {
       image: serviceTendering
     },
     {
-      icon: <Hash className="w-6 h-6" />,
-      title: "Tender Documents Numbering",
-      description: "Professional document numbering and organization for tender submissions.",
-      image: serviceNumbering
-    },
-    {
       icon: <Bookmark className="w-6 h-6" />,
       title: "Binding Services",
       description: "Complete binding solutions including wire, spiral, and hard cover binding.",
       image: serviceBinding
     },
     {
-      icon: <Trash2 className="w-6 h-6" />,
-      title: "Removal of Flyers and Posters",
-      description: "Professional removal service for outdated flyers and posters from various surfaces.",
-      image: serviceRemoval
-    },
-    {
-      icon: <CreditCard className="w-6 h-6" />,
-      title: "Business Cards",
-      description: "Premium business cards in various finishes and materials to make lasting first impressions.",
-      image: serviceBusinessCards
-    },
-    {
       icon: <Printer className="w-6 h-6" />,
       title: "Large Format Printing",
       description: "Professional large format printing for banners, posters, and signage.",
       image: serviceLargeFormat
-    }
-  ];
-
-  // Additional Services
-  const additionalServices = [
-    {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Digital Printing",
-      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details.",
-      image: serviceDigitalPrinting
     },
     {
-      icon: <Camera className="w-6 h-6" />,
-      title: "Photo Studio Services",
-      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots.",
-      image: servicePhotoStudio
+      icon: <Shirt className="w-6 h-6" />,
+      title: "Heat Press Printing",
+      description: "Custom t-shirt printing and promotional item customization with vibrant, long-lasting designs.",
+      image: serviceHeatPress
     },
     {
       icon: <Layers className="w-6 h-6" />,
@@ -84,10 +55,20 @@ const Services = () => {
       image: serviceLamination
     },
     {
-      icon: <Shirt className="w-6 h-6" />,
-      title: "Heat Press Printing",
-      description: "Custom t-shirt printing and promotional item customization with vibrant, long-lasting designs.",
-      image: serviceHeatPress
+      icon: <Printer className="w-6 h-6" />,
+      title: "Digital Printing",
+      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors and sharp details.",
+      image: serviceDigitalPrinting
+    }
+  ];
+
+  // Additional Services
+  const additionalServices = [
+    {
+      icon: <Camera className="w-6 h-6" />,
+      title: "Photo Studio Services",
+      description: "Professional photography services with modern equipment and expert lighting for portraits and product shots.",
+      image: servicePhotoStudio
     }
   ];
 
