@@ -24,24 +24,9 @@ const ServicesCarousel = () => {
       description: "Complete tendering process assistance from application preparation to submission"
     },
     {
-      image: serviceNumbering,
-      title: "Tender Documents Numbering",
-      description: "Professional document numbering and organization for tender submissions"
-    },
-    {
       image: serviceBinding,
       title: "Binding Services",
       description: "Complete binding solutions including wire, spiral, and hard cover binding"
-    },
-    {
-      image: serviceRemoval,
-      title: "Removal of Flyers and Posters",
-      description: "Professional removal service for outdated flyers and posters from various surfaces"
-    },
-    {
-      image: serviceBusinessCards,
-      title: "Business Cards",
-      description: "Premium business cards that make lasting first impressions"
     },
     {
       image: serviceLargeFormat,
