@@ -17,7 +17,8 @@ import serviceRemoval from "@/assets/service-removal.jpg";
 import serviceLargeFormat from "@/assets/service-large-format.jpg";
 
 const Services = () => {
-  const mainServices = [
+  // Core Services (Priority)
+  const coreServices = [
     {
       icon: <Copy className="w-6 h-6" />,
       title: "Photocopying",
@@ -59,7 +60,11 @@ const Services = () => {
       title: "Large Format Printing",
       description: "Professional large format printing for banners, posters, and signage.",
       image: serviceLargeFormat
-    },
+    }
+  ];
+
+  // Additional Services
+  const additionalServices = [
     {
       icon: <Printer className="w-6 h-6" />,
       title: "Digital Printing",
@@ -134,14 +139,46 @@ const Services = () => {
         <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="w-full text-left md:text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Priority Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Core Services</h2>
             <p className="text-lg text-muted-foreground w-full">
-              From photocopying to large format printing, we offer everything you need for professional results.
+              Our priority services - from photocopying to large format printing, we offer everything you need for professional results.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {mainServices.map((service, index) => (
+            {coreServices.map((service, index) => (
+              <ServiceCard
+                key={index}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                image={service.image}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Additional Services</h2>
+            <p className="text-lg text-muted-foreground w-full">
+              Extended services to complement our core offerings and meet all your printing needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {additionalServices.map((service, index) => (
               <ServiceCard
                 key={index}
                 icon={service.icon}
@@ -155,8 +192,16 @@ const Services = () => {
       </section>
 
       {/* Binding Services */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Binding Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -187,8 +232,16 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -241,8 +294,16 @@ const Services = () => {
       </section>
 
       {/* Equipment Showcase */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Modern Equipment</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

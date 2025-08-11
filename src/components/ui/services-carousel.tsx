@@ -1,34 +1,52 @@
 import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import printingServices from "@/assets/printing-services.jpg";
-import photoStudio from "@/assets/photo-studio.jpg";
-import heatPress from "@/assets/heat-press.jpg";
-import bindingServices from "@/assets/binding-services.jpg";
+import servicePhotocopying from "@/assets/service-photocopying.jpg";
+import serviceTendering from "@/assets/service-tendering.jpg";
+import serviceNumbering from "@/assets/service-numbering.jpg";
+import serviceBinding from "@/assets/service-binding.jpg";
+import serviceRemoval from "@/assets/service-removal.jpg";
+import serviceBusinessCards from "@/assets/service-business-cards.jpg";
+import serviceLargeFormat from "@/assets/service-large-format.jpg";
 
 const ServicesCarousel = () => {
   const [api, setApi] = useState<any>();
 
   const carouselItems = [
     {
-      image: printingServices,
-      title: "Digital Printing Services",
-      description: "High-quality digital printing with modern equipment"
+      image: servicePhotocopying,
+      title: "Photocopying",
+      description: "Professional photocopying services with high-quality output for all your document needs"
     },
     {
-      image: photoStudio,
-      title: "Professional Photo Studio",
-      description: "Complete photo studio setup with professional lighting"
+      image: serviceTendering,
+      title: "Tendering Process from Applications",
+      description: "Complete tendering process assistance from application preparation to submission"
     },
     {
-      image: heatPress,
-      title: "Heat Press Printing",
-      description: "Custom t-shirt and promotional item printing"
+      image: serviceNumbering,
+      title: "Tender Documents Numbering",
+      description: "Professional document numbering and organization for tender submissions"
     },
     {
-      image: bindingServices,
-      title: "Document Binding",
-      description: "Professional binding services for all your documents"
+      image: serviceBinding,
+      title: "Binding Services",
+      description: "Complete binding solutions including wire, spiral, and hard cover binding"
+    },
+    {
+      image: serviceRemoval,
+      title: "Removal of Flyers and Posters",
+      description: "Professional removal service for outdated flyers and posters from various surfaces"
+    },
+    {
+      image: serviceBusinessCards,
+      title: "Business Cards",
+      description: "Premium business cards that make lasting first impressions"
+    },
+    {
+      image: serviceLargeFormat,
+      title: "Large Format Printing",
+      description: "Professional large format printing for banners, posters, and signage"
     }
   ];
 
@@ -46,12 +64,20 @@ const ServicesCarousel = () => {
   }, [api]);
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      className="py-16 relative"
+      style={{
+        backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services in Action</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See our professional equipment and services at work
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Our Core Services in Action</h2>
+          <p className="text-lg text-muted-foreground w-full">
+            See our core professional services and equipment at work
           </p>
         </div>
         

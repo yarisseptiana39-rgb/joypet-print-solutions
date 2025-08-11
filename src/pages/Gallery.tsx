@@ -43,19 +43,37 @@ const Gallery = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection>
-        <div className="space-y-6 w-full">
-          <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center">Our Gallery</h1>
-          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
-            Explore our collection of work samples, videos, and project showcases that demonstrate 
-            the quality and creativity that makes JOYPET your trusted printing partner.
-          </p>
+      <section 
+        className="relative min-h-[60vh] flex items-center justify-center"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="space-y-6 w-full">
+            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Our Gallery</h1>
+            <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
+              Explore our collection of work samples, videos, and project showcases that demonstrate 
+              the quality and creativity that makes JOYPET your trusted printing partner.
+            </p>
+          </div>
         </div>
-      </HeroSection>
+      </section>
 
       {/* Media Gallery Section */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="w-full text-left md:text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 w-full">Media Gallery</h2>
             <p className="text-lg text-muted-foreground w-full">

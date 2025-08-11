@@ -7,19 +7,37 @@ const Careers = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection>
-        <div className="space-y-6 w-full">
-          <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center">Join Our Team</h1>
-          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
-            Be part of a dynamic team that's passionate about delivering exceptional printing 
-            and branding services. Grow your career with JOYPET Services & Printers Ltd.
-          </p>
+      <section 
+        className="relative min-h-[60vh] flex items-center justify-center"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="space-y-6 w-full">
+            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Join Our Team</h1>
+            <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
+              Be part of a dynamic team that's passionate about delivering exceptional printing 
+              and branding services. Grow your career with JOYPET Services & Printers Ltd.
+            </p>
+          </div>
         </div>
-      </HeroSection>
+      </section>
 
       {/* Current Status */}
-      <section className="py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Alert className="mb-8 border-primary/20 bg-accent/50">
             <Briefcase className="h-4 w-4" />
             <AlertDescription className="text-lg">
