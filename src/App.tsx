@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
+import LiveChatButton from "./components/ui/live-chat-button";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +48,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <LiveChatButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
