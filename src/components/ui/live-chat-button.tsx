@@ -3,8 +3,8 @@ import { Button } from "./button";
 
 const LiveChatButton = () => {
   const handleChatClick = () => {
-    // Replace with your actual WhatsApp number
-    const phoneNumber = "+254712345678"; // Update with your actual WhatsApp number
+    // Joypet WhatsApp number
+    const phoneNumber = "+254716971622";
     const message = "Hello! I'd like to inquire about your services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
