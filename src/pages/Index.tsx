@@ -120,6 +120,32 @@ const Index = () => {
       {/* Services Carousel */}
       <ServicesCarousel />
 
+      {/* Video Preview Section */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              See Our Services in Action
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Watch how we deliver exceptional printing and branding solutions
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/zfNGsJk7AGU"
+                title="Joypet Services Preview"
+                className="w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section 
         className="py-16 relative"
