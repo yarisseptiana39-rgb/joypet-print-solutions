@@ -28,7 +28,7 @@ const Gallery = () => {
       description: "T-shirt and promotional item printing examples",
       type: "video",
       thumbnail: "/api/placeholder/400/225",
-      url: "https://youtube.com/watch?v=example2"
+      url: "https://youtube.com/watch?v=PLACEHOLDER_LINK_1"
     },
     {
       id: 4,
@@ -36,7 +36,15 @@ const Gallery = () => {
       description: "Eye-catching banners for various events and promotions",
       type: "video",
       thumbnail: "/api/placeholder/400/225",
-      url: "https://youtube.com/watch?v=example3"
+      url: "https://youtube.com/watch?v=PLACEHOLDER_LINK_2"
+    },
+    {
+      id: 5,
+      title: "Photo Studio Session",
+      description: "Professional photography services and studio setup",
+      type: "video",
+      thumbnail: "/api/placeholder/400/225",
+      url: "https://youtube.com/watch?v=PLACEHOLDER_LINK_3"
     }
   ];
 
