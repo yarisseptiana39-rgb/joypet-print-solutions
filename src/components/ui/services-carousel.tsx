@@ -83,7 +83,7 @@ const ServicesCarousel = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-64 object-cover"
+                        className="w-full h-80 object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
