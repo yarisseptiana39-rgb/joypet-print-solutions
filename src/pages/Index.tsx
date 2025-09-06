@@ -19,6 +19,7 @@ import serviceNumbering from "@/assets/service-numbering.jpg";
 import serviceRemoval from "@/assets/service-removal.jpg";
 import serviceLargeFormat from "@/assets/service-large-format.jpg";
 import printingMachinesHero from "@/assets/printing-machines-hero.jpg";
+import servicesSectionBg from "@/assets/services-section-bg.jpg";
 
 const Index = () => {
   const videoRef = useRef<HTMLDivElement>(null);
@@ -176,7 +177,7 @@ const Index = () => {
       <section 
         className="py-16 relative"
         style={{
-          backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
+          backgroundImage: `url(${servicesSectionBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
