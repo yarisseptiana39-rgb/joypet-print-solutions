@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, Scissors, Zap, Copy, ClipboardList, Hash, Trash2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/ui/hero-section";
 import ServiceCard from "@/components/ui/service-card";
@@ -20,6 +21,28 @@ import serviceLargeFormat from "@/assets/service-large-format.jpg";
 import printingMachinesHero from "@/assets/printing-machines-hero.jpg";
 
 const Index = () => {
+  const videoRef = useRef<HTMLDivElement>(null);
+  const [isVideoInView, setIsVideoInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVideoInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const features = [
     { icon: <Clock className="w-6 h-6" />, text: "24/7 Service Available" },
     { icon: <CheckCircle className="w-6 h-6" />, text: "Professional Quality" },
@@ -124,7 +147,7 @@ const Index = () => {
       <ServicesCarousel />
 
       {/* Video Preview Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background" ref={videoRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -138,7 +161,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
               <iframe
-                src="https://www.youtube.com/embed/zfNGsJk7AGU"
+                src={`https://www.youtube.com/embed/zfNGsJk7AGU?autoplay=${isVideoInView ? '1' : '0'}&mute=1&controls=1`}
                 title="Joypet Services Preview"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
