@@ -97,9 +97,11 @@ const Index = () => {
           {/* Features */}
           <div className="flex flex-wrap justify-center gap-6 mt-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-2 bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                {feature.icon}
-                <span className="text-sm font-medium">{feature.text}</span>
+              <div key={index} className="flex items-center space-x-2 bg-white/20 backdrop-blur-md border border-white/30 px-6 py-3 rounded-full shadow-lg">
+                <div className="text-white">
+                  {feature.icon}
+                </div>
+                <span className="text-sm font-medium text-white">{feature.text}</span>
               </div>
             ))}
           </div>

@@ -15,7 +15,7 @@ const HeroSection = ({ children, className, backgroundImage }: HeroSectionProps)
         className
       )}
       style={backgroundImage ? { 
-        backgroundImage: `linear-gradient(135deg, hsl(0 84% 60% / 0.9), hsl(224 71% 4% / 0.9)), url(${backgroundImage})`,
+        backgroundImage: `linear-gradient(135deg, hsl(0 84% 60% / 0.4), hsl(224 71% 4% / 0.4)), url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       } : undefined}
