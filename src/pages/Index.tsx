@@ -17,6 +17,7 @@ import serviceTendering from "@/assets/service-tendering.jpg";
 import serviceNumbering from "@/assets/service-numbering.jpg";
 import serviceRemoval from "@/assets/service-removal.jpg";
 import serviceLargeFormat from "@/assets/service-large-format.jpg";
+import africanPrintingHero from "@/assets/african-printing-hero.jpg";
 
 const Index = () => {
   const features = [
@@ -82,7 +83,7 @@ const Index = () => {
     >
       <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
       <div className="relative z-10">{/* Hero Section */}
-      <HeroSection backgroundImage={homepagePrintingBg}>
+      <HeroSection backgroundImage={africanPrintingHero}>
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight w-full text-left md:text-center">
             Our Strength is <br />
