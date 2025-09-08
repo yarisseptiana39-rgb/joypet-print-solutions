@@ -17,15 +17,15 @@ const ServiceCard = ({ icon, title, description, image, className }: ServiceCard
       className
     )}>
       {image && (
-        <div className="relative h-64 overflow-hidden rounded-full mx-auto w-64">
+        <div className="relative h-48 overflow-hidden rounded-xl mx-auto">
           <img 
             src={image} 
             alt={title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-full" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           <div className="absolute top-4 left-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-primary text-primary-foreground group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground group-hover:scale-110 transition-transform duration-300 shadow-lg">
               {icon}
             </div>
           </div>

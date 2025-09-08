@@ -110,8 +110,8 @@ const Index = () => {
       <HeroSection backgroundImage={printingMachinesHero}>
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight w-full text-left md:text-center">
-            Our Strength is <br />
-            <span className="text-primary-foreground/80">Your Advantage</span>
+            <span className="bg-gradient-to-r from-primary-foreground to-primary-foreground/80 bg-clip-text text-transparent">Our Quality</span> <br />
+            <span className="text-primary-foreground/90 font-extrabold tracking-tight">Your Confidence</span>
           </h1>
           <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
             Professional printing and branding services available 24/7. 
