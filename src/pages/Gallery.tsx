@@ -1,4 +1,4 @@
-import { Play, Image as ImageIcon, Video } from "lucide-react";
+import { Play, Image as ImageIcon, Video, Star } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -48,6 +48,71 @@ const Gallery = () => {
     }
   ];
 
+  // Sample testimonials - in a real app, these would come from a CMS or API
+  const testimonials = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      company: "Tech Solutions Ltd",
+      position: "Marketing Director",
+      testimonial: "JOYPET delivered exceptional quality for our company brochures and business cards. Their attention to detail and quick turnaround time exceeded our expectations.",
+      rating: 5
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      company: "Green Earth NGO",
+      position: "Project Manager",
+      testimonial: "The large format banners for our environmental campaign were stunning. Great colors, excellent material quality, and very professional service.",
+      rating: 5
+    },
+    {
+      id: 3,
+      name: "Emma Williams",
+      company: "Startup Hub",
+      position: "CEO",
+      testimonial: "Professional photo studio services and high-quality printing for our product launch materials. JOYPET is our go-to printing partner.",
+      rating: 4
+    },
+    {
+      id: 4,
+      name: "David Rodriguez",
+      company: "Local Restaurant Chain",
+      position: "Operations Manager",
+      testimonial: "Amazing heat press work on our staff uniforms and promotional t-shirts. The designs came out perfect and the quality is outstanding.",
+      rating: 5
+    },
+    {
+      id: 5,
+      name: "Lisa Thompson",
+      company: "Educational Institute",
+      position: "Administrator",
+      testimonial: "Reliable binding and lamination services for our educational materials. Always delivered on time with consistent quality.",
+      rating: 4
+    },
+    {
+      id: 6,
+      name: "James Parker",
+      company: "Construction Co.",
+      position: "Site Manager",
+      testimonial: "High-quality safety signage and construction documentation printing. Professional service and competitive pricing.",
+      rating: 5
+    }
+  ];
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-4 h-4 ${
+          index < rating 
+            ? "fill-yellow-400 text-yellow-400" 
+            : "text-muted-foreground"
+        }`}
+      />
+    ));
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -62,7 +127,7 @@ const Gallery = () => {
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-6 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Our Gallery</h1>
+            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Gallery & Testimonials</h1>
             <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
               Explore our collection of work samples, videos, and project showcases that demonstrate 
               the quality and creativity that makes JOYPET your trusted printing partner.
@@ -143,6 +208,45 @@ const Gallery = () => {
                 <CardContent>
                   <p className="text-muted-foreground text-sm">
                     {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full text-left md:text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 w-full">What Our Clients Say</h2>
+            <p className="text-lg text-muted-foreground w-full">
+              Hear from our satisfied customers about their experience with JOYPET
+            </p>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex space-x-1">
+                      {renderStars(testimonial.rating)}
+                    </div>
+                  </div>
+                  <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                    {testimonial.name}
+                  </CardTitle>
+                  <div className="text-sm text-muted-foreground">
+                    <p className="font-medium">{testimonial.position}</p>
+                    <p>{testimonial.company}</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    "{testimonial.testimonial}"
                   </p>
                 </CardContent>
               </Card>
