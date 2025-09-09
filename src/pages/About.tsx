@@ -1,6 +1,7 @@
 import { CheckCircle, Users, Award, Clock } from "lucide-react";
 import HeroSection from "@/components/ui/hero-section";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import PartnersCarousel from "@/components/ui/partners-carousel";
 import aboutBg from "@/assets/about-bg.jpg";
 
 const About = () => {
@@ -357,6 +358,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Partners Carousel */}
+      <PartnersCarousel />
     </div>
   );
 };
