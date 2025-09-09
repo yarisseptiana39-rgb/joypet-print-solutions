@@ -10,24 +10,24 @@ interface Partner {
 const PartnersCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
 
-  // Placeholder partner data - replace with actual partner logos
+  // Partner data - replace each logo with your actual partner logos from assets
   const partners: Partner[] = [
-    { id: 1, name: "Partner 1", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
-    { id: 2, name: "Partner 2", logo: "/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png" },
-    { id: 3, name: "Partner 3", logo: "/lovable-uploads/e8f30449-5706-4a4a-90a8-d85a663ea2de.png" },
-    { id: 4, name: "Partner 4", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
-    { id: 5, name: "Partner 5", logo: "/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png" },
-    { id: 6, name: "Partner 6", logo: "/lovable-uploads/e8f30449-5706-4a4a-90a8-d85a663ea2de.png" },
-    { id: 7, name: "Partner 7", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
-    { id: 8, name: "Partner 8", logo: "/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png" },
-    { id: 9, name: "Partner 9", logo: "/lovable-uploads/e8f30449-5706-4a4a-90a8-d85a663ea2de.png" },
-    { id: 10, name: "Partner 10", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
-    { id: 11, name: "Partner 11", logo: "/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png" },
-    { id: 12, name: "Partner 12", logo: "/lovable-uploads/e8f30449-5706-4a4a-90a8-d85a663ea2de.png" },
-    { id: 13, name: "Partner 13", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
-    { id: 14, name: "Partner 14", logo: "/lovable-uploads/c418808e-dfab-4752-95e7-b52a35382a02.png" },
-    { id: 15, name: "Partner 15", logo: "/lovable-uploads/e8f30449-5706-4a4a-90a8-d85a663ea2de.png" },
-    { id: 16, name: "Partner 16", logo: "/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png" },
+    { id: 1, name: "Partner 1", logo: "" }, // Add your logo path here
+    { id: 2, name: "Partner 2", logo: "" }, // Add your logo path here
+    { id: 3, name: "Partner 3", logo: "" }, // Add your logo path here
+    { id: 4, name: "Partner 4", logo: "" }, // Add your logo path here
+    { id: 5, name: "Partner 5", logo: "" }, // Add your logo path here
+    { id: 6, name: "Partner 6", logo: "" }, // Add your logo path here
+    { id: 7, name: "Partner 7", logo: "" }, // Add your logo path here
+    { id: 8, name: "Partner 8", logo: "" }, // Add your logo path here
+    { id: 9, name: "Partner 9", logo: "" }, // Add your logo path here
+    { id: 10, name: "Partner 10", logo: "" }, // Add your logo path here
+    { id: 11, name: "Partner 11", logo: "" }, // Add your logo path here
+    { id: 12, name: "Partner 12", logo: "" }, // Add your logo path here
+    { id: 13, name: "Partner 13", logo: "" }, // Add your logo path here
+    { id: 14, name: "Partner 14", logo: "" }, // Add your logo path here
+    { id: 15, name: "Partner 15", logo: "" }, // Add your logo path here
+    { id: 16, name: "Partner 16", logo: "" }, // Add your logo path here
   ];
 
   // Group partners into sets of 4
@@ -81,14 +81,20 @@ const PartnersCarousel = () => {
                   {group.map((partner) => (
                     <div
                       key={partner.id}
-                      className="bg-background/60 backdrop-blur-sm rounded-lg p-6 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group"
+                      className="bg-background/60 backdrop-blur-sm rounded-lg p-4 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group"
                     >
-                      <div className="aspect-square flex items-center justify-center">
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                        />
+                      <div className="aspect-square w-24 h-24 mx-auto flex items-center justify-center bg-muted/20 rounded-lg">
+                        {partner.logo ? (
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                          />
+                        ) : (
+                          <div className="text-xs text-muted-foreground text-center p-2">
+                            {partner.name}
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
