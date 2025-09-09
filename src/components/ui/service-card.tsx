@@ -17,7 +17,7 @@ const ServiceCard = ({ icon, title, description, image, className }: ServiceCard
       className
     )}>
       {image && (
-        <div className="relative h-48 overflow-hidden rounded-xl mx-auto">
+        <div className="relative h-64 overflow-hidden rounded-xl mx-auto">
           <img 
             src={image} 
             alt={title}

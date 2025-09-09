@@ -109,11 +109,11 @@ const Index = () => {
       <div className="relative z-10">{/* Hero Section */}
       <HeroSection backgroundImage={printingMachinesHero}>
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight w-full text-left md:text-center">
-            <span className="bg-gradient-to-r from-primary-foreground to-primary-foreground/80 bg-clip-text text-transparent">Our Quality</span> <br />
-            <span className="text-primary-foreground/90 font-extrabold tracking-tight">Your Confidence</span>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight w-full text-left md:text-center animate-fade-in">
+            <span className="bg-gradient-to-r from-primary-foreground via-white to-primary-foreground/80 bg-clip-text text-transparent animate-pulse">Our Quality</span> <br />
+            <span className="text-primary-foreground/90 font-extrabold tracking-tight drop-shadow-lg">Your Confidence</span>
           </h1>
-          <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
+          <p className="text-xl md:text-2xl w-full text-left md:text-center text-primary-foreground/90 animate-fade-in delay-300 drop-shadow-md">
             Professional printing and branding services available 24/7. 
             From photocopying to large format printing, we deliver excellence every time.
           </p>
@@ -121,23 +121,23 @@ const Index = () => {
           {/* Features */}
           <div className="flex flex-wrap justify-center gap-6 mt-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-2 bg-white/20 backdrop-blur-md border border-white/30 px-6 py-3 rounded-full shadow-lg">
-                <div className="text-white">
+              <div key={index} className="flex items-center space-x-3 bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in" style={{ animationDelay: `${(index + 1) * 200}ms` }}>
+                <div className="text-white animate-pulse">
                   {feature.icon}
                 </div>
-                <span className="text-sm font-medium text-white">{feature.text}</span>
+                <span className="text-base font-semibold text-white">{feature.text}</span>
               </div>
             ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12 animate-fade-in delay-700">
+            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl px-8 py-6 text-lg font-bold">
               <a href="https://wa.me/254716971622?text=Hello%20JOYPET,%20I%20would%20like%20to%20place%20an%20order">Place Your Order</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <a href="tel:0716971622" className="flex items-center space-x-2">
-                <span className="text-lg font-semibold">📞 0716971622</span>
+            <Button asChild variant="outline" size="lg" className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl px-8 py-6">
+              <a href="tel:0716971622" className="flex items-center space-x-3">
+                <span className="text-xl font-bold">📞 0716971622</span>
               </a>
             </Button>
           </div>
