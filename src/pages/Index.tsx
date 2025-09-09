@@ -109,11 +109,11 @@ const Index = () => {
       <div className="relative z-10">{/* Hero Section */}
       <HeroSection backgroundImage={printingMachinesHero}>
         <div className="space-y-6">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight w-full text-left md:text-center animate-fade-in">
+          <h1 className="text-5xl md:text-8xl font-bold leading-tight w-full text-center animate-fade-in">
             <span className="bg-gradient-to-r from-primary-foreground via-white to-primary-foreground/80 bg-clip-text text-transparent animate-pulse">Our Quality</span> <br />
-            <span className="text-primary-foreground/90 font-extrabold tracking-tight drop-shadow-lg">Your Confidence</span>
+            <span className="text-primary-foreground/90 font-extrabold tracking-tight drop-shadow-2xl animate-bounce">Your Confidence</span>
           </h1>
-          <p className="text-xl md:text-2xl w-full text-left md:text-center text-primary-foreground/90 animate-fade-in delay-300 drop-shadow-md">
+          <p className="text-xl md:text-3xl w-full text-center text-primary-foreground/90 animate-fade-in delay-300 drop-shadow-md max-w-4xl mx-auto leading-relaxed">
             Professional printing and branding services available 24/7. 
             From photocopying to large format printing, we deliver excellence every time.
           </p>
@@ -184,9 +184,9 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="w-full text-left md:text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Our Priority Services</h2>
-            <p className="text-lg text-muted-foreground w-full">
+          <div className="w-full text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 w-full animate-fade-in bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">Our Priority Services</h2>
+            <p className="text-lg md:text-xl text-muted-foreground w-full max-w-3xl mx-auto animate-fade-in delay-200">
               Comprehensive printing and document services to meet all your business needs.
             </p>
           </div>
@@ -225,9 +225,9 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-background/70 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="w-full text-left md:text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">Why Choose JOYPET?</h2>
-            <p className="text-lg text-muted-foreground w-full">
+          <div className="w-full text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 w-full animate-fade-in bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">Why Choose JOYPET?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground w-full max-w-3xl mx-auto animate-fade-in delay-200">
               Experience the difference of professional service and quality
             </p>
           </div>
@@ -303,11 +303,11 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-primary-foreground">
-          <div className="w-full text-left md:text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 w-full">
+          <div className="w-full text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 w-full animate-fade-in">
               Ready to Get Started?
             </h2>
-            <p className="text-lg mb-8 text-primary-foreground/90 w-full">
+            <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 w-full max-w-3xl mx-auto animate-fade-in delay-200">
               Contact us today for a free consultation and quote for your printing needs.
             </p>
           </div>
