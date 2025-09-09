@@ -12,22 +12,22 @@ const PartnersCarousel = () => {
 
   // Partner data - replace each logo with your actual partner logos from assets
   const partners: Partner[] = [
-    { id: 1, name: "Partner 1", logo: "" }, // Add your logo path here
-    { id: 2, name: "Partner 2", logo: "" }, // Add your logo path here
-    { id: 3, name: "Partner 3", logo: "" }, // Add your logo path here
-    { id: 4, name: "Partner 4", logo: "" }, // Add your logo path here
-    { id: 5, name: "Partner 5", logo: "" }, // Add your logo path here
-    { id: 6, name: "Partner 6", logo: "" }, // Add your logo path here
-    { id: 7, name: "Partner 7", logo: "" }, // Add your logo path here
-    { id: 8, name: "Partner 8", logo: "" }, // Add your logo path here
-    { id: 9, name: "Partner 9", logo: "" }, // Add your logo path here
-    { id: 10, name: "Partner 10", logo: "" }, // Add your logo path here
-    { id: 11, name: "Partner 11", logo: "" }, // Add your logo path here
-    { id: 12, name: "Partner 12", logo: "" }, // Add your logo path here
-    { id: 13, name: "Partner 13", logo: "" }, // Add your logo path here
-    { id: 14, name: "Partner 14", logo: "" }, // Add your logo path here
-    { id: 15, name: "Partner 15", logo: "" }, // Add your logo path here
-    { id: 16, name: "Partner 16", logo: "" }, // Add your logo path here
+    { id: 1, name: "Partner 1", logo: "/src/assets/partner-1.png" }, // Replace with your actual logo
+    { id: 2, name: "Partner 2", logo: "/src/assets/partner-2.png" }, // Replace with your actual logo
+    { id: 3, name: "Partner 3", logo: "/src/assets/partner-3.png" }, // Replace with your actual logo
+    { id: 4, name: "Partner 4", logo: "/src/assets/partner-4.png" }, // Replace with your actual logo
+    { id: 5, name: "Partner 5", logo: "/src/assets/partner-5.png" }, // Replace with your actual logo
+    { id: 6, name: "Partner 6", logo: "/src/assets/partner-6.png" }, // Replace with your actual logo
+    { id: 7, name: "Partner 7", logo: "/src/assets/partner-7.png" }, // Replace with your actual logo
+    { id: 8, name: "Partner 8", logo: "/src/assets/partner-8.png" }, // Replace with your actual logo
+    { id: 9, name: "Partner 9", logo: "/src/assets/partner-9.png" }, // Replace with your actual logo
+    { id: 10, name: "Partner 10", logo: "/src/assets/partner-10.png" }, // Replace with your actual logo
+    { id: 11, name: "Partner 11", logo: "/src/assets/partner-11.png" }, // Replace with your actual logo
+    { id: 12, name: "Partner 12", logo: "/src/assets/partner-12.png" }, // Replace with your actual logo
+    { id: 13, name: "Partner 13", logo: "/src/assets/partner-13.png" }, // Replace with your actual logo
+    { id: 14, name: "Partner 14", logo: "/src/assets/partner-14.png" }, // Replace with your actual logo
+    { id: 15, name: "Partner 15", logo: "/src/assets/partner-15.png" }, // Replace with your actual logo
+    { id: 16, name: "Partner 16", logo: "/src/assets/partner-16.png" }, // Replace with your actual logo
   ];
 
   // Group partners into sets of 4
