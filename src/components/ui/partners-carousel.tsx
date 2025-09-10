@@ -1,6 +1,24 @@
 import { useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
 
+// Import partner logos
+import partner1 from "@/assets/partner-1.png";
+import partner2 from "@/assets/partner-2.png";
+import partner3 from "@/assets/partner-3.png";
+import partner4 from "@/assets/partner-4.png";
+import partner5 from "@/assets/partner-5.png";
+import partner6 from "@/assets/partner-6.png";
+import partner7 from "@/assets/partner-7.png";
+import partner8 from "@/assets/partner-8.png";
+import partner9 from "@/assets/partner-9.png";
+import partner10 from "@/assets/partner-10.png";
+import partner11 from "@/assets/partner-11.png";
+import partner12 from "@/assets/partner-12.png";
+import partner13 from "@/assets/partner-13.png";
+import partner14 from "@/assets/partner-14.png";
+import partner15 from "@/assets/partner-15.png";
+import partner16 from "@/assets/partner-16.png";
+
 interface Partner {
   id: number;
   name: string;
@@ -10,24 +28,24 @@ interface Partner {
 const PartnersCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
 
-  // Partner data - replace each logo with your actual partner logos from assets
+  // Partner data with imported logos
   const partners: Partner[] = [
-    { id: 1, name: "TechCorp Solutions", logo: "/src/assets/partner-1.png" },
-    { id: 2, name: "FinanceFirst Group", logo: "/src/assets/partner-2.png" },
-    { id: 3, name: "LogiFlow Express", logo: "/src/assets/partner-3.png" },
-    { id: 4, name: "HealthCare Plus", logo: "/src/assets/partner-4.png" },
-    { id: 5, name: "RetailMax Corp", logo: "/src/assets/partner-5.png" },
-    { id: 6, name: "BuildRight Construction", logo: "/src/assets/partner-6.png" },
-    { id: 7, name: "EduLearn Academy", logo: "/src/assets/partner-7.png" },
-    { id: 8, name: "ManufacturePro", logo: "/src/assets/partner-8.png" },
-    { id: 9, name: "Strategic Consulting", logo: "/src/assets/partner-9.png" },
-    { id: 10, name: "MediaVision Studios", logo: "/src/assets/partner-10.png" },
-    { id: 11, name: "AutoDrive Systems", logo: "/src/assets/partner-11.png" },
-    { id: 12, name: "PropertyPrime Realty", logo: "/src/assets/partner-12.png" },
-    { id: 13, name: "FoodServe Excellence", logo: "/src/assets/partner-13.png" },
-    { id: 14, name: "GreenEnergy Solutions", logo: "/src/assets/partner-14.png" },
-    { id: 15, name: "TravelMax Adventures", logo: "/src/assets/partner-15.png" },
-    { id: 16, name: "LegalPro Services", logo: "/src/assets/partner-16.png" },
+    { id: 1, name: "TechCorp Solutions", logo: partner1 },
+    { id: 2, name: "FinanceFirst Group", logo: partner2 },
+    { id: 3, name: "LogiFlow Express", logo: partner3 },
+    { id: 4, name: "HealthCare Plus", logo: partner4 },
+    { id: 5, name: "RetailMax Corp", logo: partner5 },
+    { id: 6, name: "BuildRight Construction", logo: partner6 },
+    { id: 7, name: "EduLearn Academy", logo: partner7 },
+    { id: 8, name: "ManufacturePro", logo: partner8 },
+    { id: 9, name: "Strategic Consulting", logo: partner9 },
+    { id: 10, name: "MediaVision Studios", logo: partner10 },
+    { id: 11, name: "AutoDrive Systems", logo: partner11 },
+    { id: 12, name: "PropertyPrime Realty", logo: partner12 },
+    { id: 13, name: "FoodServe Excellence", logo: partner13 },
+    { id: 14, name: "GreenEnergy Solutions", logo: partner14 },
+    { id: 15, name: "TravelMax Adventures", logo: partner15 },
+    { id: 16, name: "LegalPro Services", logo: partner16 },
   ];
 
   // Group partners into sets of 4
@@ -58,10 +76,10 @@ const PartnersCarousel = () => {
       <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent text-center">
             Our Trusted Partners
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in delay-200 text-center">
             Collaborating with industry leaders to deliver exceptional results
           </p>
         </div>
@@ -77,24 +95,21 @@ const PartnersCarousel = () => {
           <CarouselContent>
             {partnerGroups.map((group, groupIndex) => (
               <CarouselItem key={groupIndex}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
                   {group.map((partner) => (
                     <div
                       key={partner.id}
-                      className="bg-background/60 backdrop-blur-sm rounded-lg p-4 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group"
+                      className="bg-background/60 backdrop-blur-sm rounded-lg p-6 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
                     >
-                      <div className="aspect-square w-24 h-24 mx-auto flex items-center justify-center bg-muted/20 rounded-lg">
-                        {partner.logo ? (
-                          <img
-                            src={partner.logo}
-                            alt={partner.name}
-                            className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                          />
-                        ) : (
-                          <div className="text-xs text-muted-foreground text-center p-2">
-                            {partner.name}
-                          </div>
-                        )}
+                      <div className="aspect-square w-20 h-20 mx-auto flex items-center justify-center bg-background/80 rounded-lg mb-3">
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-16 h-16 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                      <div className="text-xs text-muted-foreground text-center font-medium">
+                        {partner.name}
                       </div>
                     </div>
                   ))}
