@@ -127,9 +127,9 @@ const Gallery = () => {
         <div className="absolute inset-0 bg-primary/80 backdrop-blur-[1px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="space-y-6 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Gallery & Testimonials</h1>
+            <h1 className="text-4xl md:text-6xl font-bold w-full text-left md:text-center text-primary-foreground">Gallery and Testimonials</h1>
             <p className="text-lg md:text-xl w-full text-left md:text-center text-primary-foreground/90">
-              Explore our collection of work samples, videos, and project showcases that demonstrate 
+              Explore our collection of work samples, videos, and client testimonials that showcase 
               the quality and creativity that makes JOYPET your trusted printing partner.
             </p>
           </div>
