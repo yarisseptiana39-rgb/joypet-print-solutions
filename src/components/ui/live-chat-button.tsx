@@ -24,6 +24,25 @@ const LiveChatButton = () => {
           }
         }
         
+        @keyframes icon-blink {
+          0%, 100% { 
+            color: #ffffff;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+          }
+          25% { 
+            color: #fef3c7;
+            filter: drop-shadow(0 0 8px rgba(254, 243, 199, 0.9));
+          }
+          50% { 
+            color: #fbbf24;
+            filter: drop-shadow(0 0 10px rgba(251, 191, 36, 1));
+          }
+          75% { 
+            color: #f59e0b;
+            filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.9));
+          }
+        }
+        
         .whatsapp-pulse {
           animation: pulse-colors 2.5s ease-in-out infinite;
         }
@@ -31,6 +50,16 @@ const LiveChatButton = () => {
         .whatsapp-pulse:hover {
           animation: none;
           background-color: #059669 !important;
+        }
+        
+        .icon-blink {
+          animation: icon-blink 2s ease-in-out infinite;
+        }
+        
+        .icon-blink:hover {
+          animation: none;
+          color: #ffffff !important;
+          filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)) !important;
         }
       `}</style>
       
@@ -47,7 +76,7 @@ const LiveChatButton = () => {
           size="icon"
         >
           {/* WhatsApp Icon */}
-          <MessageCircle className="w-8 h-8 text-white relative z-10 transition-transform duration-300 group-hover:scale-110" />
+          <MessageCircle className="w-8 h-8 relative z-10 transition-transform duration-300 group-hover:scale-110 icon-blink" />
           
           {/* Notification dot */}
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-bounce border-2 border-white">
