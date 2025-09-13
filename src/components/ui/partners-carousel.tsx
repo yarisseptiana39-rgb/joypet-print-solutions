@@ -95,13 +95,13 @@ const PartnersCarousel = () => {
           <CarouselContent>
             {partnerGroups.map((group, groupIndex) => (
               <CarouselItem key={groupIndex}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
                   {group.map((partner) => (
                     <div
                       key={partner.id}
-                      className="bg-background/60 backdrop-blur-sm rounded-lg p-6 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
+                      className="bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
                     >
-                      <div className="aspect-square w-20 h-20 mx-auto rounded-xl overflow-hidden mb-3 bg-white/10 backdrop-blur-sm border border-white/20">
+                      <div className="aspect-square w-20 h-20 mx-auto rounded-xl overflow-hidden mb-2">
                         <img
                           src={partner.logo}
                           alt={partner.name}
