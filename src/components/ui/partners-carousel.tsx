@@ -101,7 +101,7 @@ const PartnersCarousel = () => {
                       key={partner.id}
                       className="bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
                     >
-                      <div className="aspect-square w-20 h-20 mx-auto rounded-xl overflow-hidden mb-2">
+                      <div className="aspect-square w-32 h-32 mx-auto rounded-xl overflow-hidden mb-2">
                         <img
                           src={partner.logo}
                           alt={partner.name}
