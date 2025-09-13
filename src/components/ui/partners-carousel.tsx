@@ -101,11 +101,11 @@ const PartnersCarousel = () => {
                       key={partner.id}
                       className="bg-background/60 backdrop-blur-sm rounded-lg p-6 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
                     >
-                      <div className="aspect-square w-20 h-20 mx-auto flex items-center justify-center bg-background/80 rounded-lg mb-3">
+                      <div className="aspect-square w-28 h-28 mx-auto flex items-center justify-center bg-background/80 rounded-lg mb-3">
                         <img
                           src={partner.logo}
                           alt={partner.name}
-                          className="w-16 h-16 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                          className="w-24 h-24 object-contain transition-all duration-300 group-hover:scale-110"
                         />
                       </div>
                       <div className="text-xs text-muted-foreground text-center font-medium">
