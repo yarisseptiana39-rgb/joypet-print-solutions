@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, Scissors, Zap, Copy, ClipboardList, Hash, Trash2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock, Printer, Camera, CreditCard, FileText, Scissors, Zap, Copy, ClipboardList, Hash, Trash2, Star, Users, Award } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/ui/hero-section";
@@ -23,26 +23,70 @@ import servicesSectionBg from "@/assets/services-section-bg.jpg";
 
 const Index = () => {
   const videoRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
   const [isVideoInView, setIsVideoInView] = useState(false);
+  const [isStatsInView, setIsStatsInView] = useState(false);
+  const [counters, setCounters] = useState({ clients: 0, projects: 0, years: 0 });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const videoObserver = new IntersectionObserver(
       ([entry]) => {
         setIsVideoInView(entry.isIntersecting);
       },
       { threshold: 0.5 }
     );
 
+    const statsObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isStatsInView) {
+          setIsStatsInView(true);
+          animateCounters();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
     if (videoRef.current) {
-      observer.observe(videoRef.current);
+      videoObserver.observe(videoRef.current);
+    }
+
+    if (statsRef.current) {
+      statsObserver.observe(statsRef.current);
     }
 
     return () => {
       if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+        videoObserver.unobserve(videoRef.current);
+      }
+      if (statsRef.current) {
+        statsObserver.unobserve(statsRef.current);
       }
     };
-  }, []);
+  }, [isStatsInView]);
+
+  const animateCounters = () => {
+    const targets = { clients: 500, projects: 1200, years: 5 };
+    const duration = 2000;
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let currentStep = 0;
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+      
+      setCounters({
+        clients: Math.floor(targets.clients * progress),
+        projects: Math.floor(targets.projects * progress),
+        years: Math.floor(targets.years * progress)
+      });
+
+      if (currentStep >= steps) {
+        clearInterval(timer);
+        setCounters(targets);
+      }
+    }, stepDuration);
+  };
 
   const features = [
     { icon: <Clock className="w-6 h-6" />, text: "24/7 Service Available" },
@@ -97,7 +141,7 @@ const Index = () => {
 
   return (
     <div 
-      className="min-h-screen relative"
+      className="min-h-screen relative overflow-hidden"
       style={{
         backgroundImage: `url(/lovable-uploads/9670f2e8-a83a-4c75-8bc8-376ce607e773.png)`,
         backgroundSize: 'cover',
@@ -106,6 +150,15 @@ const Index = () => {
       }}
     >
       <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+      
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }} />
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-primary/40 rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-primary/20 rounded-full animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }} />
+        <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-primary/35 rounded-full animate-bounce" style={{ animationDelay: '0.5s', animationDuration: '3.5s' }} />
+        <div className="absolute bottom-1/3 right-1/2 w-2.5 h-2.5 bg-primary/25 rounded-full animate-bounce" style={{ animationDelay: '1.5s', animationDuration: '4.5s' }} />
+      </div>
       <div className="relative z-10">{/* Hero Section */}
       <HeroSection backgroundImage={printingMachinesHero}>
         <div className="space-y-6">
@@ -145,7 +198,45 @@ const Index = () => {
       </HeroSection>
 
       {/* Services Carousel */}
-      <ServicesCarousel />
+      <div className="animate-fade-in delay-1000">
+        <ServicesCarousel />
+      </div>
+
+      {/* Stats Section */}
+      <section 
+        ref={statsRef}
+        className="py-16 relative"
+        style={{
+          backgroundImage: `linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)/0.8) 100%)`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/90" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-primary-foreground">
+            <div className="space-y-2 animate-fade-in hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                <Users className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <div className="text-4xl md:text-6xl font-bold">{counters.clients}+</div>
+              <div className="text-lg md:text-xl text-primary-foreground/90">Happy Clients</div>
+            </div>
+            <div className="space-y-2 animate-fade-in delay-200 hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <div className="text-4xl md:text-6xl font-bold">{counters.projects}+</div>
+              <div className="text-lg md:text-xl text-primary-foreground/90">Projects Completed</div>
+            </div>
+            <div className="space-y-2 animate-fade-in delay-400 hover:scale-105 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-4 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                <Award className="w-8 h-8 text-primary-foreground" />
+              </div>
+              <div className="text-4xl md:text-6xl font-bold">{counters.years}+</div>
+              <div className="text-lg md:text-xl text-primary-foreground/90">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Video Preview Section */}
       <section className="py-16 bg-background" ref={videoRef}>
@@ -193,13 +284,14 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                image={service.image}
-              />
+              <div key={index} className="animate-fade-in hover-scale" style={{ animationDelay: `${index * 100}ms` }}>
+                <ServiceCard
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  image={service.image}
+                />
+              </div>
             ))}
           </div>
 
@@ -233,9 +325,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm hover:bg-background/80 hover:scale-105 transition-all duration-300 animate-fade-in group">
               <CardHeader>
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Clock className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle>24/7 Availability</CardTitle>
@@ -247,9 +339,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm hover:bg-background/80 hover:scale-105 transition-all duration-300 animate-fade-in delay-100 group">
               <CardHeader>
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle>Fast Turnaround</CardTitle>
@@ -261,9 +353,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm hover:bg-background/80 hover:scale-105 transition-all duration-300 animate-fade-in delay-200 group">
               <CardHeader>
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle>Quality Assured</CardTitle>
@@ -275,9 +367,9 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm">
+            <Card className="text-center border-0 bg-background/70 backdrop-blur-sm hover:bg-background/80 hover:scale-105 transition-all duration-300 animate-fade-in delay-300 group">
               <CardHeader>
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <CreditCard className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle>Affordable Pricing</CardTitle>
