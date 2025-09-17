@@ -101,7 +101,7 @@ const PartnersCarousel = () => {
                     <img
                       src={partner.logo}
                       alt={`${partner.name} logo`}
-                      className="h-14 md:h-16 lg:h-20 w-auto object-contain"
+                      className="h-20 md:h-24 lg:h-32 w-auto object-contain"
                       loading="lazy"
                     />
                   </div>
