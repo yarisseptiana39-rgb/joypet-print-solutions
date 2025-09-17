@@ -95,23 +95,16 @@ const PartnersCarousel = () => {
           <CarouselContent>
             {partnerGroups.map((group, groupIndex) => (
               <CarouselItem key={groupIndex}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 justify-items-center">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 justify-items-center">
                   {group.map((partner) => (
-                    <div
-                      key={partner.id}
-                      className="bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 border hover:shadow-elegant transition-all duration-300 hover:scale-105 group w-full max-w-[200px]"
-                    >
-                      <div className="aspect-square w-32 h-32 mx-auto rounded-xl overflow-hidden mb-2">
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
-                        />
-                      </div>
-                      <div className="text-xs text-muted-foreground text-center font-medium">
-                        {partner.name}
-                      </div>
-                    </div>
+                  <div key={partner.id} className="flex items-center justify-center w-full">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="h-14 md:h-16 lg:h-20 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                   ))}
                 </div>
               </CarouselItem>
