@@ -102,10 +102,16 @@ const Index = () => {
       image: servicePhotocopying
     },
     {
-      icon: <ClipboardList className="w-6 h-6" />,
-      title: "Tendering Process from Applications",
-      description: "Complete tendering process assistance from application preparation to submission.",
-      image: serviceTendering
+      icon: <Printer className="w-6 h-6" />,
+      title: "Digital Printing",
+      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors.",
+      image: serviceDigitalPrinting
+    },
+    {
+      icon: <Printer className="w-6 h-6" />,
+      title: "Large Format Printing",
+      description: "Professional large format printing for banners, posters, and signage.",
+      image: serviceLargeFormat
     },
     {
       icon: <FileText className="w-6 h-6" />,
@@ -114,10 +120,10 @@ const Index = () => {
       image: serviceBinding
     },
     {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Large Format Printing",
-      description: "Professional large format printing for banners, posters, and signage.",
-      image: serviceLargeFormat
+      icon: <ClipboardList className="w-6 h-6" />,
+      title: "Tendering Process from Applications",
+      description: "Complete tendering process assistance from application preparation to submission.",
+      image: serviceTendering
     },
     {
       icon: <Zap className="w-6 h-6" />,
@@ -130,12 +136,6 @@ const Index = () => {
       title: "Laminations",
       description: "Professional lamination services to protect and enhance your important documents and materials.",
       image: serviceLamination
-    },
-    {
-      icon: <Printer className="w-6 h-6" />,
-      title: "Digital Printing",
-      description: "High-quality digital printing for documents, flyers, brochures, and more with vibrant colors.",
-      image: serviceDigitalPrinting
     }
   ];
 
